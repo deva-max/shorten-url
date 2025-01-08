@@ -64,3 +64,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Note: 
+project root folder availble postman package file and rest api service
+Mail recieved photo copy found but the mail service due to some time not working pbulic email and limitations
+register your self navigate throw the generate url's and

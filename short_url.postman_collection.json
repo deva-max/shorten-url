@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e8e8e182-a1cd-493e-8bca-b9a44efd2190",
+		"name": "short_url",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31822925"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "csrf-token",
+						"value": "7hd7e40h0P2hKTmbtFfkGTg26r2x5B7g9rccyR6o",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "laravel_session=session_value",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"fred@outlook.com\",\r\n  \"password\": \"password\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}token",
+					"host": [
+						"{{url}}token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "short-url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "long_url",
+							"value": "https://identity.getpostman.com/browser-auth/success?redirect_uri=postman%3A%2F%2Fauth%2Fcallback&code=311113d2d0e2d482b88e9320b8196051efbb9b9eab208ee91725131646a8546c",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}generate",
+					"host": [
+						"{{url}}generate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|60n2IgpquzaajbO6URsLXJcsQHQBJXJcyRZnWAej9420b72b",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
